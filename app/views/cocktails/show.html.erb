@@ -1,0 +1,18 @@
+<h1><%= @cocktail.name %></h1>
+
+
+<%# Aprovecho las asociaciones de doses, con el id busco los ingredients %>
+<h2>Ingredients:</h2>
+<% @cocktail.doses.each do |dose| %>
+  <div class="d-flex justify-content-between">
+    <p><%= Ingredient.find(dose.ingredient_id).name %></p>
+    <p><%= dose.description %></p>
+    <p><%= link_to "(Delete)", dose_path(dose.id), method: :delete,
+            data: { confirm: "Are you sure?" } %></p>
+  </div>
+  
+<% end %>
+
+<strong> <%= link_to 'Add new ingredient/dose', new_cocktail_dose_path(@cocktail.id) %> </strong>
+
+<p><%= link_to "Back to list", cocktails_path %></p>
