@@ -1,14 +1,25 @@
 <h1>Cocktails list</h1>
 <h4><%= link_to "+ Add a new cocktail", new_cocktail_path %></h4>
+
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=cocktail.image_url%>)">
+      <h1><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h1>
+    </div>
+  <%end%>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
 <p>testing cloudinary...</p>
 <%= cl_image_tag("kxlh5gt1ty36tukpphxv",
       width: 400, height: 300, crop: :fill) %>
 
 
-<% @cocktails.each do |cocktail| %>
-  <h1><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h1>
-  <%= image_tag(cocktail.image_url, {:style => "width:100px;"}) %>
-<% end  %>
 
 
 <%# <strong> <%= link_to 'Leave a new review', new_restaurant_review_path(restaurant) %> 
