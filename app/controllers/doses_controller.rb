@@ -18,6 +18,7 @@ class DosesController < ApplicationController
       render :new
     end
   end
+  
   def destroy
     @dose = Dose.find(params[:id])
     @dose.destroy
