@@ -8,3 +8,35 @@
 
 <%# <strong> <%= link_to 'Leave a new review', new_restaurant_review_path(restaurant) %> 
   <%# </strong>  %>
+<%# 
+  <h1>Cocktails list</h1>
+<h4><%= link_to "+ Add a new cocktail", new_cocktail_path %>
+<%# </h4> %>
+<%# <div class="card-product">
+  
+  <% @cocktails.each do |cocktail| %>
+      <%# <%= image_tag(cocktail.image_url, {:style => "width:100px;"}) %> 
+      <%# <div class="card-product-infos">
+    <% @cocktails.each do |cocktail| %>
+      <%# <h2><%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+      <%# </h2>  %>
+    <%# <% end  %>
+    <%# <p>Ingredients:</p>
+      <% @cocktails.each do |cocktail| %>
+          <%# <% cocktail.doses.each do |dose| %>
+            <%# <p><%= Ingredient.find(dose.ingredient_id).name %>
+            <%# </p> %>
+            <%# <p><%= dose.description %>
+            <%# </p> %> 
+          <%# <% end  %> 
+      <%# <% end %>
+  <%# </div>
+    <% end  %> 
+<%# </div> %>
+<%# <div class="card-product"> %>
+  <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
+  <%# <div class="card-product-infos"> %>
+    <%# <h2>Product name</h2> %>
+    <%# <p>Product description with <strong>relevant info</strong> only.</p> %>
+  <%# </div> %>
+<%# </div> %>
