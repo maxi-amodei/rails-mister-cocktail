@@ -16,3 +16,6 @@
 <strong> <%= link_to 'Add new ingredient/dose', new_cocktail_dose_path(@cocktail.id) %> </strong>
 
 <p><%= link_to "Back to list", cocktails_path %></p>
+
+<p>testing photo upload active_storage...</p>
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
