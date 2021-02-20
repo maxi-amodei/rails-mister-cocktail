@@ -1,9 +1,11 @@
-<h1>New cocktail</h1>
-<p><%= link_to "Back to list", cocktails_path %></p>
-<br>
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%# <%= f.input :image_url%>
-  <%= f.submit class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <h1>New cocktail</h1>
+  <p><%= link_to "Back to list", cocktails_path %></p>
+  <br>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file, class: "btn btn-ghost" %>
+    <%# <%= f.input :image_url%>
+    <%= f.submit class: "btn btn-ghost" %>
+  <% end %>
+</div>
